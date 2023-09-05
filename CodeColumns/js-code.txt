@@ -1,0 +1,14 @@
+// Import all functions from helpers.js using the alias 'Helpers'
+import * as Helpers from './helpers.js';|
+
+import { currentStep } from './script.js';
+
+const stepInfo = [|
+    {
+      Descripion: "Center the container",
+      action: () => {|
+        Helpers.centerContainer();
+      },
+      triggerCharacter: ';',|
+      getClass: () => "",
+    }

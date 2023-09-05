@@ -1,0 +1,145 @@
+/* Reset and Normalize Styles */
+
+/* Use the border-box box-sizing model for all elements */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Reset default margins on all elements */
+* {
+    margin: 0;
+}
+
+/* Improve typography and text rendering */
+
+/* Set line-height and text rendering properties for better readability */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Make media elements responsive */
+
+/* Ensure media elements like images and videos adapt to the screen width */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* Normalize form element styles */
+
+/* Inherit font styles for input, button, textarea, and select elements */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* Prevent text overflow in headings and paragraphs */
+
+/* Allow headings and paragraphs to wrap text to the next line if needed */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* Create a root stacking context */
+
+/* Isolate the root and "__next" elements to create stacking contexts */
+#root, #__next {
+    isolation: isolate;
+}
+
+/* Column Styles */
+
+/* Define styles for code columns */
+
+/* Make code columns non-interactive and partially visible */
+.code-column {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 33.33%;
+    background-color: transparent; /* Remove the background color */
+    pointer-events: none; /* Make them non-interactive */
+}
+
+code {
+    opacity: 0.15;
+}
+
+.html-code {
+    left: 0;
+}
+
+.css-code {
+    left: 33.33%;
+}
+
+.js-code {
+    left: 66.66%;
+}
+pre {
+    position: absolute;
+    left: -10000px;
+}
+
+/* Portfolio Styles */
+
+/* Styles for the portfolio section */
+
+/* Position the portfolio section above code columns */
+.portfolio {
+    position: absolute;
+    top:5px;
+    z-index: 1; /* Ensure the portfolio appears above the code columns */
+}
+
+/* Center the portfolio container */
+
+/* Use flexbox to center the .container horizontally */
+.container {
+    display: flex;
+    transition: transform 2s ease; /* Smooth transition for centering */
+    width: 25vw;
+    height: 30vh;
+}
+
+/* Apply a centered and scaled effect on the .container */
+
+/* When centered-scaled class is applied, center and scale the container */
+.container.centered-scaled {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    -ms-transform: translate(-50%, -50%);
+    transform: scale(3) translate(100%, 50%);
+}
+
+/* Step 5 Div Styles */
+
+/* Styles for the div created in Step 5 */
+
+/* Define initial styles for the Step 5 div */
+.step5-div {
+    background-color: lightblue;
+    width: 100px;
+    height: 100px;
+    transition: transform 1s ease-in-out; /* Apply a scaling transition */
+}
+
+/* Step 6 Div Styles */
+
+/* Styles for the div created in Step 6 */
+
+/* Apply a scaling effect to the Step 6 div */
+.step6-div {
+    transform: scale(3);
+}
+
+.loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0; /* Initial width of 0, indicating no progress */
+    height: 5px; /* Adjust the height as needed */
+    background-color: #007bff; /* Loading bar color */
+    transition: width 0.3s ease-in-out; /* Add a smooth transition effect */
+  }
